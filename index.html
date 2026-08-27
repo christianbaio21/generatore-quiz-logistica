@@ -8,7 +8,9 @@
   <style>
 :root{--ink:#16221d;--muted:#708078;--line:#dfe7e2;--paper:#fbfcfa;--mint:#d7f0de;--green:#3e7955;--coral:#f4d6ce;--coral-ink:#9c4c3c}*{box-sizing:border-box}body{margin:0;background:#eef3ef;color:var(--ink);font-family:'DM Sans',sans-serif}.shell{max-width:980px;margin:0 auto;min-height:100vh;background:var(--paper);padding:0 70px 72px}.topbar{height:88px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{font-family:'Space Grotesk';font-weight:700;display:flex;align-items:center;gap:10px}.brand-mark{display:grid;place-items:center;background:var(--ink);color:white;width:28px;height:28px;border-radius:8px;font-size:17px}.ghost-button,.back-button{border:0;background:none;color:var(--muted);font:600 13px inherit;cursor:pointer}.hero{padding:76px 0 0;max-width:730px}.eyebrow,.question-kicker,.result-badge{letter-spacing:.13em;font-size:11px;font-weight:700;color:var(--green)}h1,h2{font-family:'Space Grotesk';line-height:1.04;margin:16px 0 18px}h1{font-size:58px;letter-spacing:-.055em}h1 em{font-style:normal;color:var(--green)}.intro{font-size:17px;line-height:1.6;color:var(--muted);max-width:600px}.home-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:44px}.mode-card{border:1px solid var(--line);background:white;border-radius:16px;padding:22px;display:flex;align-items:center;gap:14px;text-align:left;cursor:pointer;color:var(--ink);transition:.2s}.mode-card:hover:not(:disabled){transform:translateY(-2px);border-color:#a8c6b0}.mode-card.primary{background:var(--mint);border-color:var(--mint)}.mode-card:disabled{opacity:.55;cursor:not-allowed}.mode-card strong,.mode-card small{display:block}.mode-card strong{font-size:15px}.mode-card small{font-size:12px;color:var(--muted);margin-top:5px}.mode-card b{margin-left:auto;font-size:22px;font-weight:400}.mode-icon{font-size:24px}.stats-row{display:flex;gap:55px;border-top:1px solid var(--line);margin-top:60px;padding-top:22px}.stats-row strong,.stats-row span{display:block}.stats-row strong{font:700 24px 'Space Grotesk'}.stats-row span{font-size:12px;color:var(--muted);margin-top:3px}.hidden{display:none!important}.quiz-view,.result-view{padding-top:34px}.quiz-header,.progress-meta{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px}.quiz-header span{font-weight:600;color:var(--green)}.progress-meta{margin-top:55px;font-size:12px}.progress-track{height:5px;background:#e6ece8;border-radius:5px;margin:10px 0 28px}.progress-track div{height:100%;background:var(--green);border-radius:5px;transition:.3s}.question-card{background:white;border:1px solid var(--line);border-radius:20px;padding:34px 38px 30px;box-shadow:0 12px 35px rgba(22,34,29,.05)}h2{font-size:30px;letter-spacing:-.035em;line-height:1.18;max-width:780px;margin:12px 0 28px}.question-image{display:block;max-width:100%;max-height:260px;margin:-8px auto 24px;object-fit:contain}.options{display:grid;gap:10px}.option{display:flex;align-items:flex-start;gap:13px;width:100%;border:1px solid var(--line);border-radius:12px;padding:15px 16px;background:#fff;color:var(--ink);font:15px/1.45 inherit;text-align:left;cursor:pointer}.option:hover:not(:disabled),.option.selected{border-color:#79a887;background:#f2faf4}.option-marker{flex:0 0 25px;height:25px;border-radius:50%;background:#eff3f0;display:grid;place-items:center;font-size:11px;font-weight:700;color:var(--muted)}.option.selected .option-marker{background:var(--green);color:#fff}.option.correct{border-color:#83b792;background:#e9f7ec}.option.correct .option-marker{background:var(--green);color:white}.option.wrong{border-color:#e3a090;background:#fff1ed}.option.wrong .option-marker{background:var(--coral-ink);color:white}.feedback{margin-top:18px;border-radius:10px;padding:11px 14px;font-size:13px;font-weight:600}.is-correct{background:#e9f7ec;color:var(--green)}.is-wrong{background:#fff1ed;color:var(--coral-ink)}.quiz-actions{display:flex;align-items:center;justify-content:space-between;margin-top:28px}.secondary-button,.next-button{border:0;border-radius:10px;padding:13px 17px;font:600 13px inherit;cursor:pointer}.secondary-button{background:#f0f4f1;color:var(--muted)}.next-button{background:var(--ink);color:white}.next-button:disabled{opacity:.4;cursor:not-allowed}.next-button span{font-size:18px;margin-left:18px}.result-view{max-width:650px;margin:70px auto;text-align:center}.result-view h1{font-size:50px}.result-view p{color:var(--muted);line-height:1.6}.result-number{font:700 90px 'Space Grotesk';color:var(--green);margin-top:38px}.result-label{color:var(--muted);font-size:13px}.result-actions{display:flex;justify-content:center;gap:12px;margin-top:42px}
 @media(max-width:720px){.shell{padding:0 22px 48px}.topbar{height:70px}.hero{padding-top:52px}h1{font-size:45px}.home-grid{grid-template-columns:1fr;margin-top:30px}.stats-row{gap:25px;margin-top:42px}.question-card{padding:25px 18px 22px}h2{font-size:24px}.quiz-actions{gap:10px;align-items:stretch;flex-direction:column-reverse}.next-button,.secondary-button{width:100%}.result-view{margin-top:45px}.result-view h1{font-size:42px}.result-actions{flex-direction:column}.question-image{max-height:180px}}
+@media(max-width:720px){.selection-grid{grid-template-columns:1fr}.archive-card{grid-column:auto}}
 .archive-view{padding-top:34px}.archive-intro{margin:60px 0 30px}.archive-intro h2{margin-bottom:10px}.archive-intro p{color:var(--muted);line-height:1.6;max-width:650px}.archive-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.archive-grid figure{margin:0;padding:12px;background:white;border:1px solid var(--line);border-radius:14px}.archive-grid img{display:block;width:100%;height:auto;border-radius:8px}.archive-grid figcaption{font-size:12px;color:var(--muted);padding:9px 3px 2px}.archive-card{grid-column:1/-1}
+.selection-view{padding-top:34px}.selection-intro{margin:60px 0 30px}.selection-intro h2{margin-bottom:10px}.selection-intro p{color:var(--muted);line-height:1.6;max-width:650px}.selection-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.selection-card{display:flex;align-items:center;gap:14px;border:1px solid var(--line);background:white;border-radius:14px;padding:18px;text-align:left;color:var(--ink);cursor:pointer;transition:.2s}.selection-card:hover{transform:translateY(-2px);border-color:#a8c6b0}.selection-card strong,.selection-card small{display:block}.selection-card strong{font-size:14px}.selection-card small{font-size:12px;color:var(--muted);margin-top:5px}.selection-card b{margin-left:auto;font-size:22px;font-weight:400}.selection-number,.selection-icon{display:grid;place-items:center;width:38px;height:38px;border-radius:10px;background:var(--mint);color:var(--green);font:700 14px 'Space Grotesk';flex:0 0 38px}.selection-icon{font-size:21px}.timer{padding:8px 12px;border-radius:9px;background:var(--mint);color:var(--green);font:700 14px 'Space Grotesk';letter-spacing:.03em}.timer.warning{background:var(--coral);color:var(--coral-ink)}
 
 </style>
 </head>
@@ -26,9 +28,23 @@
       <div class="home-grid">
         <button class="mode-card primary" id="start-all" type="button"><span class="mode-icon">→</span><span><strong>Tutte le domande</strong><small>Riparti dall’intero archivio</small></span><b>›</b></button>
         <button class="mode-card" id="start-errors" type="button"><span class="mode-icon">↻</span><span><strong>Ripassa gli errori</strong><small id="errors-count">Nessuna domanda da ripassare</small></span><b>›</b></button>
+        <button class="mode-card" id="open-blocks" type="button"><span class="mode-icon">▥</span><span><strong>Blocchi da 30</strong><small>10 minuti per ogni blocco</small></span><b>›</b></button>
+        <button class="mode-card" id="open-categories" type="button"><span class="mode-icon">⌘</span><span><strong>Per categoria</strong><small>Raggruppate per argomento</small></span><b>›</b></button>
         <button class="mode-card archive-card" id="open-exams" type="button"><span class="mode-icon">▤</span><span><strong>Esami recenti</strong><small>Consulta i 27 screenshot aggiunti</small></span><b>›</b></button>
       </div>
       <div class="stats-row"><div><strong id="stat-answered">0</strong><span>risposte date</span></div><div><strong id="stat-correct">0%</strong><span>precisione</span></div><div><strong id="stat-errors">0</strong><span>da ripassare</span></div></div>
+    </section>
+
+    <section class="selection-view hidden" id="blocks-view">
+      <div class="quiz-header"><button class="back-button" id="blocks-home" type="button">← Torna alla panoramica</button><span>Blocchi temporizzati</span></div>
+      <div class="selection-intro"><div class="eyebrow">SIMULAZIONE D’ESAME</div><h2>Scegli un blocco da 30 domande.</h2><p>Ogni blocco ha un timer di 10 minuti. Al termine, le domande non svolte vengono salvate per il ripasso.</p></div>
+      <div class="selection-grid" id="blocks-grid"></div>
+    </section>
+
+    <section class="selection-view hidden" id="categories-view">
+      <div class="quiz-header"><button class="back-button" id="categories-home" type="button">← Torna alla panoramica</button><span>Domande per categoria</span></div>
+      <div class="selection-intro"><div class="eyebrow">ALLENAMENTO MIRATO</div><h2>Concentrati su un argomento.</h2><p>Le domande sono raggruppate per tema in base al contenuto del testo originale.</p></div>
+      <div class="selection-grid" id="categories-grid"></div>
     </section>
 
     <section class="archive-view hidden" id="archive-view">
@@ -38,7 +54,7 @@
     </section>
 
     <section class="quiz-view hidden" id="quiz-view">
-      <div class="quiz-header"><button class="back-button" id="back-home" type="button">← Torna alla panoramica</button><span id="quiz-mode-label">Tutte le domande</span></div>
+      <div class="quiz-header"><button class="back-button" id="back-home" type="button">← Torna alla panoramica</button><span id="quiz-mode-label">Tutte le domande</span><span class="timer hidden" id="timer">10:00</span></div>
       <div class="progress-meta"><span id="question-number">Domanda 1 di 204</span><span id="progress-percent">0%</span></div>
       <div class="progress-track"><div id="progress-bar"></div></div>
       <article class="question-card">
@@ -65,64 +81,61 @@ window.EXAM_SCREENSHOTS = [
 ];
 
 const STORAGE_KEY = 'teoria-logistica-progress-v1';
-const state = { session: [], index: 0, answers: [], mode: 'all', selected: null, locked: false };
+const state = { session: [], index: 0, answers: [], mode: 'all', label: 'Tutte le domande', selected: null, locked: false, timerEnabled: false, timeLeft: 600, timerId: null };
 const progress = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{"answered":{},"correct":{}}');
 const $ = (id) => document.getElementById(id);
-
+const CATEGORY_RULES = [
+  ['Magazzini e stoccaggio', /magazzin|stoccagg|ricettività|selettività|selettiv|giacenza|scaffal|catasta|corridoio|banchin|isotempo|live storage|shared storage|dedicated storage|class-based|drive[-‐]in|drive[-‐]through|picking|PM[- ]?in|PM[- ]?out/i],
+  ['Material handling', /material handling|AGV|carrell|trasloelevatore|elevatore a tazze|trasportatore|nastro|rulli|tapparell|vassoi|discensore|ciclo semplice|ciclo combinato|movimentazione/i],
+  ['Imballaggi, pallet ed etichette', /pallet|imballagg|unità di carico|UDC|slip sheet|cartone|film estensibile|resistenza allo schiacciamento|etichetta logistic|contenitore|bottigli/i],
+  ['Trasporti e intermodalità', /trasporto|strada|ferrovi|intermodal|cassa mobile|conto proprio|autostrada viaggiante|peso totale|peso lordo|voluminos|pesante|STE[FN]/i],
+  ['Codici e tracciabilità', /codice|EAN|GTIN|ISSN|ISBN|application identifier|tracciabilità|rintracci|bollettino|medicinal|farmaco/i],
+  ['Supply chain e sistemi logistici', /supply chain|just in time|JIT|logistic|flussi|integrazione|marketing|commodit|efficace|efficiente|5R|4R|reverse logistic/i],
+  ['Incoterms', /Incoterm|franco fabbrica|franco destino/i],
+];
 function saveProgress() { localStorage.setItem(STORAGE_KEY, JSON.stringify(progress)); }
 function errorIds() { return Object.keys(progress.answered).filter((id) => progress.answered[id] !== progress.correct[id]); }
+function classify(question) { return (CATEGORY_RULES.find(([, pattern]) => pattern.test(question.question)) || ['Altri argomenti'])[0]; }
+function groupedQuestions() { return QUIZ_QUESTIONS.reduce((groups, question) => { const category = classify(question); (groups[category] ||= []).push(question); return groups; }, {}); }
 function updateHome() {
-  const answered = Object.keys(progress.answered).length;
-  const correct = Object.values(progress.correct).filter(Boolean).length;
-  const errors = errorIds().length;
-  $('stat-answered').textContent = answered;
-  $('stat-correct').textContent = answered ? `${Math.round(correct / answered * 100)}%` : '0%';
-  $('stat-errors').textContent = errors;
-  $('errors-count').textContent = errors ? `${errors} ${errors === 1 ? 'domanda' : 'domande'} da ripassare` : 'Nessuna domanda da ripassare';
-  $('start-errors').disabled = !errors;
+  const answered = Object.keys(progress.answered).length; const correct = Object.values(progress.correct).filter(Boolean).length; const errors = errorIds().length;
+  $('stat-answered').textContent = answered; $('stat-correct').textContent = answered ? `${Math.round(correct / answered * 100)}%` : '0%'; $('stat-errors').textContent = errors;
+  $('errors-count').textContent = errors ? `${errors} ${errors === 1 ? 'domanda' : 'domande'} da ripassare` : 'Nessuna domanda da ripassare'; $('start-errors').disabled = !errors;
 }
-function show(view) { ['home-view','quiz-view','result-view','archive-view'].forEach((id) => $(id).classList.toggle('hidden', id !== view)); }
+function show(view) { ['home-view','quiz-view','result-view','archive-view','blocks-view','categories-view'].forEach((id) => $(id).classList.toggle('hidden', id !== view)); }
 function showArchive() { show('archive-view'); $('archive-grid').innerHTML = EXAM_SCREENSHOTS.map((src, index) => `<figure><img src="${src}" alt="Screenshot esame ${index + 1}"><figcaption>Screenshot ${index + 1} di ${EXAM_SCREENSHOTS.length}</figcaption></figure>`).join(''); }
-function begin(mode) {
-  state.mode = mode; state.index = 0; state.selected = null; state.locked = false;
-  state.session = mode === 'errors' ? errorIds().map(Number).map((id) => QUIZ_QUESTIONS.find((q) => q.id === id)).filter(Boolean) : [...QUIZ_QUESTIONS];
-  state.answers = []; show('quiz-view'); renderQuestion();
+function showBlocks() {
+  show('blocks-view'); const count = Math.ceil(QUIZ_QUESTIONS.length / 30);
+  $('blocks-grid').innerHTML = Array.from({ length: count }, (_, index) => { const start = index * 30; const total = Math.min(30, QUIZ_QUESTIONS.length - start); return `<button class="selection-card" data-block="${index}"><span class="selection-number">${String(index + 1).padStart(2, '0')}</span><span><strong>Blocco ${index + 1}</strong><small>Domande ${start + 1}–${start + total} · 10 minuti</small></span><b>›</b></button>`; }).join('');
+  [...$('blocks-grid').querySelectorAll('[data-block]')].forEach((button) => button.addEventListener('click', () => { const index = Number(button.dataset.block); begin('block', `Blocco ${index + 1}`, QUIZ_QUESTIONS.slice(index * 30, index * 30 + 30), true); }));
 }
+function showCategories() {
+  show('categories-view'); const groups = groupedQuestions();
+  $('categories-grid').innerHTML = Object.entries(groups).sort((a, b) => a[0].localeCompare(b[0])).map(([name, questions]) => `<button class="selection-card" data-category="${encodeURIComponent(name)}"><span class="selection-icon">⌁</span><span><strong>${name}</strong><small>${questions.length} ${questions.length === 1 ? 'domanda' : 'domande'}</small></span><b>›</b></button>`).join('');
+  [...$('categories-grid').querySelectorAll('[data-category]')].forEach((button) => button.addEventListener('click', () => { const name = decodeURIComponent(button.dataset.category); begin('category', name, groups[name], false); }));
+}
+function begin(mode, label, questions = QUIZ_QUESTIONS, timerEnabled = false) {
+  state.mode = mode; state.label = label; state.session = questions; state.index = 0; state.answers = []; state.timerEnabled = timerEnabled; state.timeLeft = 600; state.selected = null; state.locked = false; clearInterval(state.timerId); show('quiz-view'); renderQuestion();
+}
+function startTimer() { clearInterval(state.timerId); state.timerId = setInterval(() => { state.timeLeft -= 1; renderTimer(); if (state.timeLeft <= 0) timeUp(); }, 1000); }
+function renderTimer() { const minutes = Math.floor(Math.max(0, state.timeLeft) / 60); const seconds = Math.max(0, state.timeLeft) % 60; $('timer').textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`; $('timer').classList.toggle('warning', state.timeLeft <= 60); }
 function renderQuestion() {
-  const question = state.session[state.index];
-  state.selected = null; state.locked = false;
-  $('quiz-mode-label').textContent = state.mode === 'errors' ? 'Ripasso degli errori' : 'Tutte le domande';
-  $('question-number').textContent = `Domanda ${state.index + 1} di ${state.session.length}`;
-  const percent = Math.round(state.index / state.session.length * 100);
-  $('progress-percent').textContent = `${percent}%`; $('progress-bar').style.width = `${percent}%`;
-  $('question-text').textContent = question.question;
-  $('options').innerHTML = '';
-  question.options.forEach((option, index) => {
-    const button = document.createElement('button'); button.className = 'option'; button.type = 'button'; button.dataset.index = index;
-    button.innerHTML = `<span class="option-marker">${String.fromCharCode(65 + index)}</span><span>${option}</span>`;
-    button.addEventListener('click', () => selectOption(index)); $('options').appendChild(button);
-  });
-  $('question-image').classList.toggle('hidden', !question.image);
-  if (question.image) { $('question-image').src = question.image; }
-  $('feedback').className = 'feedback hidden'; $('feedback').textContent = '';
-  $('next-button').disabled = true; $('next-button').innerHTML = 'Conferma risposta <span>→</span>';
-  $('skip-button').disabled = false;
+  const question = state.session[state.index]; state.selected = null; state.locked = false; $('quiz-mode-label').textContent = state.label; $('question-number').textContent = `Domanda ${state.index + 1} di ${state.session.length}`;
+  const percent = Math.round(state.index / state.session.length * 100); $('progress-percent').textContent = `${percent}%`; $('progress-bar').style.width = `${percent}%`; $('question-text').textContent = question.question; $('options').innerHTML = '';
+  question.options.forEach((option, index) => { const button = document.createElement('button'); button.className = 'option'; button.type = 'button'; button.dataset.index = index; button.innerHTML = `<span class="option-marker">${String.fromCharCode(65 + index)}</span><span>${option}</span>`; button.addEventListener('click', () => selectOption(index)); $('options').appendChild(button); });
+  $('question-image').classList.toggle('hidden', !question.image); if (question.image) $('question-image').src = question.image; $('feedback').className = 'feedback hidden'; $('feedback').textContent = ''; $('next-button').disabled = true; $('next-button').innerHTML = 'Conferma risposta <span>→</span>'; $('skip-button').disabled = false;
+  $('timer').classList.toggle('hidden', !state.timerEnabled); if (state.timerEnabled) { renderTimer(); if (state.index === 0) startTimer(); }
 }
 function selectOption(index) { if (state.locked) return; state.selected = index; [...$('options').children].forEach((el) => el.classList.toggle('selected', Number(el.dataset.index) === index)); $('next-button').disabled = false; }
 function submit(answer) {
-  if (state.locked) return;
-  const question = state.session[state.index]; const isCorrect = answer !== null && question.correct !== null && answer === question.correct;
-  progress.answered[question.id] = answer; progress.correct[question.id] = isCorrect; saveProgress(); state.answers.push(isCorrect); state.locked = true;
-  [...$('options').children].forEach((el) => { const index = Number(el.dataset.index); el.disabled = true; if (index === question.correct) el.classList.add('correct'); if (index === answer && !isCorrect) el.classList.add('wrong'); });
-  const feedback = $('feedback'); feedback.className = `feedback ${isCorrect ? 'is-correct' : 'is-wrong'}`; feedback.textContent = isCorrect ? 'Risposta corretta' : answer === null ? 'Domanda salvata per il ripasso' : 'Risposta da ripassare';
-  $('next-button').innerHTML = state.index === state.session.length - 1 ? 'Vedi risultato <span>→</span>' : 'Prossima domanda <span>→</span>'; $('skip-button').disabled = true;
+  if (state.locked) return; const question = state.session[state.index]; const isCorrect = answer !== null && question.correct !== null && answer === question.correct; progress.answered[question.id] = answer; progress.correct[question.id] = isCorrect; saveProgress(); state.answers.push(isCorrect); state.locked = true;
+  [...$('options').children].forEach((el) => { const index = Number(el.dataset.index); el.disabled = true; if (index === question.correct) el.classList.add('correct'); if (index === answer && !isCorrect) el.classList.add('wrong'); }); const feedback = $('feedback'); feedback.className = `feedback ${isCorrect ? 'is-correct' : 'is-wrong'}`; feedback.textContent = isCorrect ? 'Risposta corretta' : answer === null ? 'Domanda salvata per il ripasso' : 'Risposta da ripassare'; $('next-button').innerHTML = state.index === state.session.length - 1 ? 'Vedi risultato <span>→</span>' : 'Prossima domanda <span>→</span>'; $('skip-button').disabled = true;
 }
-function finish() { const total = state.session.length; const good = state.answers.filter(Boolean).length; $('result-score').textContent = `${Math.round(good / total * 100)}%`; $('result-summary').textContent = `${good} risposte corrette su ${total}. Le domande sbagliate o saltate sono state salvate automaticamente.`; $('retry-errors').disabled = !errorIds().length; show('result-view'); updateHome(); }
-$('start-all').addEventListener('click', () => begin('all')); $('start-errors').addEventListener('click', () => begin('errors'));
-$('open-exams').addEventListener('click', showArchive); $('archive-home').addEventListener('click', () => { show('home-view'); updateHome(); });
-$('next-button').addEventListener('click', () => { if (!state.locked) submit(state.selected); else if (state.index < state.session.length - 1) { state.index += 1; renderQuestion(); } else finish(); });
-$('skip-button').addEventListener('click', () => submit(null)); $('back-home').addEventListener('click', () => { show('home-view'); updateHome(); }); $('result-home').addEventListener('click', () => { show('home-view'); updateHome(); }); $('retry-errors').addEventListener('click', () => begin('errors'));
-$('reset-button').addEventListener('click', () => { if (confirm('Vuoi cancellare risposte e lista di ripasso?')) { localStorage.removeItem(STORAGE_KEY); location.reload(); } });
+function timeUp() { clearInterval(state.timerId); if (!state.locked) submit(null); for (let index = state.index + 1; index < state.session.length; index += 1) { const question = state.session[index]; progress.answered[question.id] = null; progress.correct[question.id] = false; } saveProgress(); $('feedback').textContent = 'Tempo scaduto: le domande non svolte sono state salvate per il ripasso.'; $('feedback').className = 'feedback is-wrong'; $('next-button').innerHTML = 'Vedi risultato <span>→</span>'; $('next-button').disabled = false; }
+function finish() { clearInterval(state.timerId); const total = state.session.length; const good = state.answers.filter(Boolean).length; $('result-score').textContent = `${Math.round(good / total * 100)}%`; $('result-summary').textContent = `${good} risposte corrette su ${total}. Le domande sbagliate o saltate sono state salvate automaticamente.`; $('retry-errors').disabled = !errorIds().length; show('result-view'); updateHome(); }
+$('start-all').addEventListener('click', () => begin('all', 'Tutte le domande')); $('start-errors').addEventListener('click', () => begin('errors', 'Ripasso degli errori', errorIds().map(Number).map((id) => QUIZ_QUESTIONS.find((q) => q.id === id)).filter(Boolean))); $('open-exams').addEventListener('click', showArchive); $('open-blocks').addEventListener('click', showBlocks); $('open-categories').addEventListener('click', showCategories);
+$('next-button').addEventListener('click', () => { if (!state.locked) submit(state.selected); else if (state.index < state.session.length - 1) { state.index += 1; renderQuestion(); } else finish(); }); $('skip-button').addEventListener('click', () => submit(null)); $('back-home').addEventListener('click', () => { clearInterval(state.timerId); show('home-view'); updateHome(); }); $('result-home').addEventListener('click', () => { show('home-view'); updateHome(); }); $('retry-errors').addEventListener('click', () => begin('errors', 'Ripasso degli errori', errorIds().map(Number).map((id) => QUIZ_QUESTIONS.find((q) => q.id === id)).filter(Boolean)));
+$('archive-home').addEventListener('click', () => { show('home-view'); updateHome(); }); $('blocks-home').addEventListener('click', () => { show('home-view'); updateHome(); }); $('categories-home').addEventListener('click', () => { show('home-view'); updateHome(); }); $('reset-button').addEventListener('click', () => { if (confirm('Vuoi cancellare risposte e lista di ripasso?')) { localStorage.removeItem(STORAGE_KEY); location.reload(); } });
 updateHome();
 
 </script>
