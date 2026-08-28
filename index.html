@@ -13,6 +13,7 @@
 @media(max-width:720px){.answer-controls{flex-direction:column}.answer-controls select{min-width:0}.answer-item{grid-template-columns:38px 1fr;gap:10px;padding:15px}.answer-item h3{font-size:15px}}
 .archive-view{padding-top:34px}.archive-intro{margin:60px 0 30px}.archive-intro h2{margin-bottom:10px}.archive-intro p{color:var(--muted);line-height:1.6;max-width:650px}.archive-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.archive-grid figure{margin:0;padding:12px;background:white;border:1px solid var(--line);border-radius:14px}.archive-grid img{display:block;width:100%;height:auto;border-radius:8px}.archive-grid figcaption{font-size:12px;color:var(--muted);padding:9px 3px 2px}.archive-card{grid-column:1/-1}
 .selection-view{padding-top:34px}.selection-intro{margin:60px 0 30px}.selection-intro h2{margin-bottom:10px}.selection-intro p{color:var(--muted);line-height:1.6;max-width:650px}.selection-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.selection-card{display:flex;align-items:center;gap:14px;border:1px solid var(--line);background:white;border-radius:14px;padding:18px;text-align:left;color:var(--ink);cursor:pointer;transition:.2s}.selection-card:hover{transform:translateY(-2px);border-color:#a8c6b0}.selection-card strong,.selection-card small{display:block}.selection-card strong{font-size:14px}.selection-card small{font-size:12px;color:var(--muted);margin-top:5px}.selection-card b{margin-left:auto;font-size:22px;font-weight:400}.selection-number,.selection-icon{display:grid;place-items:center;width:38px;height:38px;border-radius:10px;background:var(--mint);color:var(--green);font:700 14px 'Space Grotesk';flex:0 0 38px}.selection-icon{font-size:21px}.timer{padding:8px 12px;border-radius:9px;background:var(--mint);color:var(--green);font:700 14px 'Space Grotesk';letter-spacing:.03em}.timer.warning{background:var(--coral);color:var(--coral-ink)}
+.notes-view{padding-top:34px}.notes-actions{display:flex;gap:12px;margin:28px 0 18px}.notes-actions a{text-decoration:none;display:inline-flex;align-items:center}.notes-frame{width:100%;height:720px;border:1px solid var(--line);border-radius:14px;background:white}@media(max-width:720px){.notes-frame{height:620px}.notes-actions{flex-direction:column}.notes-actions a{justify-content:center}}
 
 </style>
 </head>
@@ -34,6 +35,7 @@
         <button class="mode-card" id="open-blocks" type="button"><span class="mode-icon">▥</span><span><strong>Blocchi da 30</strong><small>10 minuti per ogni blocco</small></span><b>›</b></button>
         <button class="mode-card" id="open-categories" type="button"><span class="mode-icon">⌘</span><span><strong>Per categoria</strong><small>Raggruppate per argomento</small></span><b>›</b></button>
         <button class="mode-card" id="open-answers" type="button"><span class="mode-icon">✓</span><span><strong>Risposte corrette</strong><small>Ripasso rapido, domanda per domanda</small></span><b>›</b></button>
+        <button class="mode-card" id="open-notes" type="button"><span class="mode-icon">▱</span><span><strong>Appunti</strong><small>Consulta la dispensa completa</small></span><b>›</b></button>
         <button class="mode-card archive-card" id="open-exams" type="button"><span class="mode-icon">▤</span><span><strong>Esami recenti</strong><small>Consulta i 27 screenshot aggiunti</small></span><b>›</b></button>
       </div>
       <div class="stats-row"><div><strong id="stat-answered">0</strong><span>risposte date</span></div><div><strong id="stat-correct">0%</strong><span>precisione</span></div><div><strong id="stat-errors">0</strong><span>da ripassare</span></div></div>
@@ -62,6 +64,13 @@
       <div class="quiz-header"><button class="back-button" id="archive-home" type="button">← Torna alla panoramica</button><span>Archivio screenshot esami</span></div>
       <div class="archive-intro"><div class="eyebrow">MATERIALE AGGIUNTIVO</div><h2>Le prove degli anni recenti, tutte insieme.</h2><p>Queste immagini sono conservate integralmente come riferimento, comprese figure, opzioni e risposte evidenziate nel materiale originale.</p></div>
       <div class="archive-grid" id="archive-grid"></div>
+    </section>
+
+    <section class="notes-view hidden" id="notes-view">
+      <div class="quiz-header"><button class="back-button" id="notes-home" type="button">← Torna alla panoramica</button><span>Appunti</span></div>
+      <div class="archive-intro"><div class="eyebrow">DISPENSA DI STUDIO</div><h2>Gli appunti di Teoria Logistica.</h2><p>Consulta direttamente la dispensa completa senza uscire dal generatore.</p></div>
+      <div class="notes-actions"><a class="next-button" href="Appunti.pdf" target="_blank" rel="noopener">Apri a schermo intero <span>↗</span></a><a class="secondary-button" href="Appunti.pdf" download>Scarica PDF</a></div>
+      <iframe class="notes-frame" src="Appunti.pdf" title="Appunti di Teoria Logistica"></iframe>
     </section>
 
     <section class="quiz-view hidden" id="quiz-view">
@@ -147,7 +156,7 @@ function updateHome() {
   $('stat-answered').textContent = answered; $('stat-correct').textContent = answered ? `${Math.round(correct / answered * 100)}%` : '0%'; $('stat-errors').textContent = errors;
   $('errors-count').textContent = errors ? `${errors} ${errors === 1 ? 'domanda' : 'domande'} da ripassare` : 'Nessuna domanda da ripassare'; $('start-errors').disabled = !errors;
 }
-function show(view) { ['home-view','quiz-view','result-view','archive-view','blocks-view','categories-view','answers-view'].forEach((id) => $(id).classList.toggle('hidden', id !== view)); }
+function show(view) { ['home-view','quiz-view','result-view','archive-view','blocks-view','categories-view','answers-view','notes-view'].forEach((id) => $(id).classList.toggle('hidden', id !== view)); }
 function showArchive() { show('archive-view'); $('archive-grid').innerHTML = EXAM_SCREENSHOTS.map((src, index) => `<figure><img src="${src}" alt="Screenshot esame ${index + 1}"><figcaption>Screenshot ${index + 1} di ${EXAM_SCREENSHOTS.length}</figcaption></figure>`).join(''); }
 function showBlocks() {
   show('blocks-view'); const count = Math.ceil(QUIZ_QUESTIONS.length / 30);
@@ -185,10 +194,10 @@ function submit(answer) {
 function timeUp() { clearInterval(state.timerId); if (!state.locked) submit(null); for (let index = state.index + 1; index < state.session.length; index += 1) { const question = state.session[index]; progress.answered[question.id] = null; progress.correct[question.id] = false; } saveProgress(); $('feedback').textContent = 'Tempo scaduto: le domande non svolte sono state salvate per il ripasso.'; $('feedback').className = 'feedback is-wrong'; $('next-button').innerHTML = 'Vedi risultato <span>→</span>'; $('next-button').disabled = false; }
 function finish() { clearInterval(state.timerId); const total = state.session.length; const good = state.answers.filter(Boolean).length; $('result-score').textContent = `${Math.round(good / total * 100)}%`; $('result-summary').textContent = `${good} risposte corrette su ${total}. Le domande sbagliate o saltate sono state salvate automaticamente.`; $('retry-errors').disabled = !errorIds().length; show('result-view'); updateHome(); }
 $('start-all').addEventListener('click', () => begin('all', 'Tutte le domande')); $('start-random').addEventListener('click', () => begin('random', 'Quiz casuale', randomQuestions(), true)); $('start-errors').addEventListener('click', () => begin('errors', 'Ripasso degli errori', errorIds().map(Number).map((id) => QUIZ_QUESTIONS.find((q) => q.id === id)).filter(Boolean))); $('open-exams').addEventListener('click', showArchive); $('open-blocks').addEventListener('click', showBlocks); $('open-categories').addEventListener('click', showCategories);
-$('open-answers').addEventListener('click', showAnswers);
+$('open-answers').addEventListener('click', showAnswers); $('open-notes').addEventListener('click', () => show('notes-view'));
 $('next-button').addEventListener('click', () => { if (!state.locked) submit(state.selected); else if (state.index < state.session.length - 1) { state.index += 1; renderQuestion(); } else finish(); }); $('skip-button').addEventListener('click', () => submit(null)); $('back-home').addEventListener('click', () => { clearInterval(state.timerId); show('home-view'); updateHome(); }); $('result-home').addEventListener('click', () => { show('home-view'); updateHome(); }); $('retry-errors').addEventListener('click', () => begin('errors', 'Ripasso degli errori', errorIds().map(Number).map((id) => QUIZ_QUESTIONS.find((q) => q.id === id)).filter(Boolean)));
 $('archive-home').addEventListener('click', () => { show('home-view'); updateHome(); }); $('blocks-home').addEventListener('click', () => { show('home-view'); updateHome(); }); $('categories-home').addEventListener('click', () => { show('home-view'); updateHome(); }); $('reset-button').addEventListener('click', () => { if (confirm('Vuoi cancellare risposte e lista di ripasso?')) { localStorage.removeItem(STORAGE_KEY); location.reload(); } });
-$('answers-home').addEventListener('click', () => { show('home-view'); updateHome(); });
+$('answers-home').addEventListener('click', () => { show('home-view'); updateHome(); }); $('notes-home').addEventListener('click', () => { show('home-view'); updateHome(); });
 updateHome();
 
 </script>
