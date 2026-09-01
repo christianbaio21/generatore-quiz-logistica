@@ -65,7 +65,7 @@
     <section class="notes-view hidden" id="notes-view">
       <div class="quiz-header"><button class="back-button" id="notes-home" type="button">← Torna alla panoramica</button><span>Appunti</span></div>
       <div class="archive-intro"><div class="eyebrow">DISPENSA DI STUDIO</div><h2>Gli appunti di Teoria Logistica.</h2><p>Consulta direttamente la dispensa completa senza uscire dal generatore.</p></div>
-      <div class="notes-actions"><a class="next-button" href="Appunti.pdf" target="_blank" rel="noopener">Apri a schermo intero <span>↗</span></a><a class="secondary-button" href="Appunti.pdf" download>Scarica PDF</a></div>
+      <div class="notes-actions"><a class="next-button" href="Appunti.pdf" target="_blank" rel="noopener">Apri a schermo intero <span>↗</span></a><a class="secondary-button" href="Appunti.pdf" target="_blank" rel="noopener">Apri / salva PDF</a></div>
       <iframe class="notes-frame" src="Appunti.pdf" title="Appunti di Teoria Logistica"></iframe>
     </section>
 
@@ -183,7 +183,7 @@ function updateHome() {
   $('errors-count').textContent = errors ? `${errors} ${errors === 1 ? 'domanda' : 'domande'} da ripassare` : 'Nessuna domanda da ripassare'; $('start-errors').disabled = !errors;
 }
 function show(view) { ['home-view','quiz-view','result-view','blocks-view','categories-view','answers-view','notes-view','exam-pdfs-view'].forEach((id) => $(id).classList.toggle('hidden', id !== view)); }
-function showExamPdfs() { show('exam-pdfs-view'); $('exam-pdf-grid').innerHTML = EXAM_PDFS.map((exam) => `<article class="exam-pdf-card"><div class="selection-icon">PDF</div><div class="exam-pdf-info"><h3>${exam.title}</h3><div class="exam-pdf-actions"><a class="next-button" href="${exam.file}" target="_blank" rel="noopener">Apri <span>↗</span></a><a class="secondary-button" href="${exam.file}" download>Scarica</a></div></div></article>`).join(''); }
+function showExamPdfs() { show('exam-pdfs-view'); $('exam-pdf-grid').innerHTML = EXAM_PDFS.map((exam) => `<article class="exam-pdf-card"><div class="selection-icon">PDF</div><div class="exam-pdf-info"><h3>${exam.title}</h3><div class="exam-pdf-actions"><a class="next-button" href="${exam.file}" target="_blank" rel="noopener">Apri PDF <span>↗</span></a><a class="secondary-button" href="${exam.file}" target="_blank" rel="noopener">Apri / salva</a></div></div></article>`).join(''); }
 function showBlocks() {
   show('blocks-view'); const count = Math.ceil(QUIZ_QUESTIONS.length / 30);
   $('blocks-grid').innerHTML = Array.from({ length: count }, (_, index) => { const start = index * 30; const blockQuestions = QUIZ_QUESTIONS.slice(start, start + 30); const total = blockQuestions.length; const completed = blockQuestions.filter((question) => Object.prototype.hasOwnProperty.call(progress.answered, question.id)).length; const isComplete = completed === total; return `<button class="selection-card${isComplete ? ' is-complete' : ''}" data-block="${index}"><span class="selection-number">${isComplete ? '✓' : String(index + 1).padStart(2, '0')}</span><span><strong>Blocco ${index + 1}</strong><small>Domande ${start + 1}–${start + total} · ${isComplete ? 'Completato al 100%' : `${completed}/${total} completate`} · 10 minuti</small></span><b>›</b></button>`; }).join('');
